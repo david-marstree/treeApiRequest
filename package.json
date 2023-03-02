@@ -1,0 +1,24 @@
+{
+  "name": "treeapirequest",
+  "version": "1.0.0",
+  "description": "for aws lambda api request and response handling",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/david-marstree/treeApiRequest.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda"
+  ],
+  "author": "David MARS tree",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/david-marstree/treeApiRequest/issues"
+  },
+  "homepage": "https://github.com/david-marstree/treeApiRequest#readme"
+}
