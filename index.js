@@ -2,7 +2,7 @@ const qs = require('qs');
 
 
 module.exports.option = (event) => {
-    result = {
+    return {
         method: event.httpMethod,
         path: event.path,
         data: {
