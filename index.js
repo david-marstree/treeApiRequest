@@ -1,10 +1,13 @@
+const qs = require('qs');
+
+
 module.exports.option = (event) => {
-    return {
+    result = {
         method: event.httpMethod,
         path: event.path,
         data: {
             ...(event.body ? JSON.parse(event.body) : {}),
-            ...(event.queryStringParameters ? event.queryStringParameters : {}),
+            ...(event.queryStringParameters ? qs.parse(qs.stringify(event.queryStringParameters)) : {}),
         },
         headers: event.headers
     }

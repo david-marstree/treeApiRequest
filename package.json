@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/david-marstree/treeApiRequest/issues"
   },
-  "homepage": "https://github.com/david-marstree/treeApiRequest#readme"
+  "homepage": "https://github.com/david-marstree/treeApiRequest#readme",
+  "dependencies": {
+    "qs": "^6.11.1"
+  }
 }
