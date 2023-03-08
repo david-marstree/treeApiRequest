@@ -1,6 +1,6 @@
 {
   "name": "treeapirequest",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "for aws lambda api request and response handling",
   "main": "index.js",
   "devDependencies": {},
