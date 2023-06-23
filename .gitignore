@@ -1,4 +1,9 @@
 # Logs
+tags
+tags.temp
+tags.lock
+package-lock.json
+yarn.lock
 logs
 *.log
 npm-debug.log*
