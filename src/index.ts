@@ -1,6 +1,6 @@
 const qs = require("qs");
 
-export const option = (event: any) => {
+const option = (event: any) => {
   return {
     method: event.httpMethod,
     path: event.path,
@@ -14,7 +14,7 @@ export const option = (event: any) => {
   };
 };
 
-export const response = (data: any, statusCode: any = 200): object => {
+const response = (data: any, statusCode: any = 200): object => {
   return {
     statusCode: !!data ? statusCode : 400,
     //  Uncomment below to enable CORS requests
@@ -24,4 +24,9 @@ export const response = (data: any, statusCode: any = 200): object => {
     },
     body: JSON.stringify(data),
   };
+};
+
+module.exports = {
+  option,
+  response,
 };

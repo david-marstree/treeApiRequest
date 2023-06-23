@@ -1,5 +1,6 @@
+"use strict";
 const qs = require("qs");
-export const option = (event) => {
+const option = (event) => {
     return {
         method: event.httpMethod,
         path: event.path,
@@ -12,7 +13,7 @@ export const option = (event) => {
         headers: event.headers,
     };
 };
-export const response = (data, statusCode = 200) => {
+const response = (data, statusCode = 200) => {
     return {
         statusCode: !!data ? statusCode : 400,
         //  Uncomment below to enable CORS requests
@@ -22,4 +23,8 @@ export const response = (data, statusCode = 200) => {
         },
         body: JSON.stringify(data),
     };
+};
+module.exports = {
+    option,
+    response,
 };
