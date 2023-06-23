@@ -1,4 +1,4 @@
-import qs from "qs";
+const qs = require("qs");
 export const option = (event) => {
     return {
         method: event.httpMethod,
