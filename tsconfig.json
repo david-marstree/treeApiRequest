@@ -1,7 +1,17 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
+  "extends": "@tsconfig/node-lts/tsconfig.json",
   "compilerOptions": {
-		"module": "es6"
+    "target": "ES2015",
+		"module": "ES2020",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./lib/esm/",
+    "strict": true,
+    "allowJs": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "declarationMap": true
 	},
   "include": ["src"],
   "exclude": ["node_modules"]

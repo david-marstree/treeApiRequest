@@ -1,6 +1,28 @@
-const qs = require("qs");
+import qs from "qs";
+import type {
+  APIGatewayProxyEvent,
+  APIGatewayProxyResult,
+  APIGatewayProxyEventHeaders,
+} from "aws-lambda";
+import { HTTPMethod } from "http-method-enum";
+import { StatusCodes } from "http-status-codes";
 
-const option = (event: any) => {
+export type RequestData = {
+  [key: string]: any;
+};
+
+export type ResultData = {
+  [key: string]: any;
+};
+
+export type Options = {
+  method: HTTPMethod;
+  path: string;
+  data: RequestData;
+  headers: APIGatewayProxyEventHeaders;
+};
+
+const option = (event: APIGatewayProxyEvent) => {
   return {
     method: event.httpMethod,
     path: event.path,
@@ -14,7 +36,10 @@ const option = (event: any) => {
   };
 };
 
-const response = (data: any, statusCode: any = 200): object => {
+const response = (
+  data: ResultData | null | undefined,
+  statusCode: StatusCodes,
+): APIGatewayProxyResult => {
   return {
     statusCode: !!data ? statusCode : 400,
     //  Uncomment below to enable CORS requests
@@ -26,7 +51,9 @@ const response = (data: any, statusCode: any = 200): object => {
   };
 };
 
-module.exports = {
-  option,
-  response,
-};
+// module.exports = {
+//   option,
+//   response,
+// };
+//
+export { option, response };

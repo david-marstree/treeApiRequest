@@ -1,5 +1,5 @@
 const qs = require("qs");
-const treeApiRequest = require("../src/");
+const treeApiRequest = require("../lib/cjs/");
 
 const json = require("./event.json");
 
