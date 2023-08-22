@@ -1,9 +1,10 @@
 {
     "name": "treeapirequest",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "for aws lambda api request and response handling",
     "main": "lib/cjs/index.js",
     "module": "lib/esm/index.js",
+    "type": "module",
     "types": "lib/esm/index.d.ts",
     "devDependencies": {
         "@tsconfig/node-lts": "^18.12.3",
@@ -39,5 +40,12 @@
         "test": "jest",
         "start": "node src/index.js",
         "build": "tsc && tsc -p tsconfig-cjs.json"
+    },
+    "exports": {
+        ".": {
+            "import": "./lib/esm/index.js",
+            "require": "./lib/cjs/index.js"
+        },
+        "./package.json": "./package.json"
     }
 }
