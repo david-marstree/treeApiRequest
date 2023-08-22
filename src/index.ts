@@ -22,7 +22,7 @@ export type Options = {
   headers: APIGatewayProxyEventHeaders;
 };
 
-const option = (event: APIGatewayProxyEvent) => {
+export const option = (event: APIGatewayProxyEvent) => {
   return {
     method: event.httpMethod,
     path: event.path,
@@ -36,7 +36,7 @@ const option = (event: APIGatewayProxyEvent) => {
   };
 };
 
-const response = (
+export const response = (
   data: ResultData | null | undefined,
   statusCode: StatusCodes,
 ): APIGatewayProxyResult => {
@@ -56,4 +56,4 @@ const response = (
 //   response,
 // };
 //
-export { option, response };
+export default { option, response };

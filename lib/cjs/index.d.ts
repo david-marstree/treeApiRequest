@@ -13,12 +13,21 @@ export type Options = {
     data: RequestData;
     headers: APIGatewayProxyEventHeaders;
 };
-declare const option: (event: APIGatewayProxyEvent) => {
+export declare const option: (event: APIGatewayProxyEvent) => {
     method: string;
     path: string;
     data: any;
     headers: APIGatewayProxyEventHeaders;
 };
-declare const response: (data: ResultData | null | undefined, statusCode: StatusCodes) => APIGatewayProxyResult;
-export { option, response };
+export declare const response: (data: ResultData | null | undefined, statusCode: StatusCodes) => APIGatewayProxyResult;
+declare const _default: {
+    option: (event: APIGatewayProxyEvent) => {
+        method: string;
+        path: string;
+        data: any;
+        headers: APIGatewayProxyEventHeaders;
+    };
+    response: (data: ResultData | null | undefined, statusCode: StatusCodes) => APIGatewayProxyResult;
+};
+export default _default;
 //# sourceMappingURL=index.d.ts.map
